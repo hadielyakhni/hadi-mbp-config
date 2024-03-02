@@ -2,12 +2,14 @@
 {
   imports =
     [
-      ./core.nix
+      ./btop.nix
       # ./gh.nix
       ./git.nix
+      ./htop.nix
       ./shell.nix
       # ./tmux.nix
       ./vim.nix
+      ./wireguard.nix
     ];
 
   home = {
