@@ -4,6 +4,7 @@
     [
       ./btop.nix
       # ./gh.nix
+      ./direnv.nix
       ./git.nix
       ./htop.nix
       ./shell.nix
