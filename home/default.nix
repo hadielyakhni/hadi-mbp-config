@@ -3,13 +3,14 @@
   imports =
     [
       ./btop.nix
+      ./editorconfig.nix
       ./gh.nix
       ./direnv.nix
       ./git.nix
       ./gpg.nix
       ./htop.nix
       ./ripgrep.nix
-       ./tmux.nix
+      ./tmux.nix
       ./vim.nix
       ./wireguard.nix
       ./zsh.nix
