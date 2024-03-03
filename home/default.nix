@@ -6,6 +6,7 @@
       # ./gh.nix
       ./direnv.nix
       ./git.nix
+      ./gpg.nix
       ./htop.nix
       ./ripgrep.nix
        ./tmux.nix
