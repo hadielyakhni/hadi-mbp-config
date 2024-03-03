@@ -11,6 +11,7 @@
       # ./tmux.nix
       ./vim.nix
       ./wireguard.nix
+      ./zsh.nix
     ];
 
   home = {
