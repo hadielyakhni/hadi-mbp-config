@@ -8,7 +8,7 @@
       ./git.nix
       ./htop.nix
       ./ripgrep.nix
-      # ./tmux.nix
+       ./tmux.nix
       ./vim.nix
       ./wireguard.nix
       ./zsh.nix
