@@ -1,7 +1,8 @@
-{pkgs, ...}: {
+{pkgs, nixvim, ...}: {
   programs.neovim = {
     enable = true;
-    viAlias = true;
+    # being able to use `vi` when something is wrong with neovim is useful
+    viAlias = false;
     vimAlias = true;
     withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
@@ -11,7 +12,7 @@
       rainbow # Colors matching parentheses. No further configuration required.
       jellybeans-vim
       nerdtree # Filesystem explorer. Toggle with <Ctrl-n>, customize with `:help NERDTree`.
-      fzf-vim # Fuzzy file search integration. Invoke with :Files, :GFiles, etc.
+      fzf-vim # Fuzzy file search integration. Invoke with :Files, :GFiles, etc. :Rg for ripgrep.
       vim-devicons # Adds file icons to Vim plugins like NERDTree. Requires a patched font.
       coc-nvim # IntelliSense engine. Configure with `:help coc-nvim`.
       # CoC extensions for various languages and snippets. Add more as needed.
@@ -20,11 +21,14 @@
       coc-html
       coc-python
       coc-snippets
+      coc-docker
+      copilot-vim
       vim-polyglot # Language pack supporting a wide array of languages.
       vim-lightline-coc # Lightweight statusline/tabline, integrates with CoC. Customize in `g:lightline`.
       vim-gitgutter # Shows git diff in the gutter. Customize with `:help gitgutter`.
       ale # Asynchronous linting/fixing framework. Configure with `:help ale`.
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
+      vim-be-good # Vim learning game. Use `:VimBeGood` to start.
     ];
     extraConfig = ''
       syntax on
@@ -45,16 +49,17 @@
       map <C-n> :NERDTreeToggle<CR>
       let NERDTreeShowHidden=1
 
-      " FZF configuration - Customize FZF window size
+      " FZF and Ripgrep integration for enhanced searching
       let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6 } }
+      " Use Ripgrep with FZF for searching
 
       " CoC (Conquer of Completion) configuration
       " For detailed setup and shortcuts, visit: https://github.com/neoclide/coc.nvim
       " Example: To add more CoC extensions, modify the list below
-      let g:coc_global_extensions = ['coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets']
-      " Use <Tab> to navigate the completion menu
-      inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-      inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+      let g:coc_global_extensions = ['coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml']
+      " " Use <Tab> to navigate the completion menu
+      " inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+      " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
       " Use <CR> (Enter) to accept completion suggestion
       inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
