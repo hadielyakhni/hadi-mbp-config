@@ -7,7 +7,7 @@
       ./direnv.nix
       ./git.nix
       ./htop.nix
-      ./shell.nix
+      ./ripgrep.nix
       # ./tmux.nix
       ./vim.nix
       ./wireguard.nix
