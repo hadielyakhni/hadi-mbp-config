@@ -3,6 +3,7 @@
     enable = true;
     viAlias = true;
     vimAlias = true;
+    withNodeJs = true;
     plugins = with pkgs.vimPlugins; [
       vim-lastplace
       vim-airline # Provides an enhanced status and tabline. To customize: :help airline
