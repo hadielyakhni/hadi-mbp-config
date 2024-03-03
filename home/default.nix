@@ -3,7 +3,7 @@
   imports =
     [
       ./btop.nix
-      # ./gh.nix
+      ./gh.nix
       ./direnv.nix
       ./git.nix
       ./gpg.nix
