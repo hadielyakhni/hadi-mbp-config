@@ -25,6 +25,9 @@ in
       rerere.enabled = true;
     };
     lfs.enable = true;
+
+    # syntax highlighted diffs
+    difftastic.enable = true;
     ignores = [ ".direnv" ".idea" ".DS_Store" ];
   };
 }
