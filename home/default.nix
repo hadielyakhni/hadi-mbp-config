@@ -11,6 +11,7 @@
       ./git.nix
       ./gpg.nix
       ./htop.nix
+      ./radare2.nix
       ./ripgrep.nix
       ./tmux.nix
       ./vim.nix
