@@ -3,9 +3,11 @@
   imports =
     [
       ./btop.nix
-      ./editorconfig.nix
-      ./gh.nix
       ./direnv.nix
+      ./editorconfig.nix
+      ./fd.nix
+      ./ffmpeg.nix
+      ./gh.nix
       ./git.nix
       ./gpg.nix
       ./htop.nix
