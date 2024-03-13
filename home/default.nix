@@ -13,6 +13,7 @@
       ./htop.nix
       ./radare2.nix
       ./ripgrep.nix
+      ./telegram.nix
       ./tmux.nix
       ./vim.nix
       ./wireguard.nix
@@ -22,6 +23,7 @@
   home = {
     username = username;
     homeDirectory = "/Users/${username}";
+
 
     # This value determines the Home Manager release that your
     # configuration is compatible with. This helps avoid breakage
