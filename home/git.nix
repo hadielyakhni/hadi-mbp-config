@@ -23,6 +23,8 @@ in
       push.autoSetupRemote = true;
       # Reuse merge conflict fixes when rebasing
       rerere.enabled = true;
+
+      core.editor = "vim";
     };
     lfs.enable = true;
 
