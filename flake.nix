@@ -34,6 +34,8 @@
         ./modules/nix-core.nix
         ./modules/apps.nix
         ./modules/system.nix
+        ./modules/fonts.nix
+        ./modules/zsh.nix
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
