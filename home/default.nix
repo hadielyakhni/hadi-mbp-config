@@ -11,10 +11,12 @@
       ./git.nix
       ./gpg.nix
       ./htop.nix
+      ./iproute2mac.nix
       ./radare2.nix
       ./ripgrep.nix
       ./telegram.nix
       ./tmux.nix
+      ./utm.nix
       ./vim.nix
       ./wireguard.nix
       ./zsh.nix
