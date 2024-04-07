@@ -12,6 +12,7 @@
       ./gpg.nix
       ./htop.nix
       ./iproute2mac.nix
+      ./minecraft.nix
       ./radare2.nix
       ./ripgrep.nix
       ./telegram.nix

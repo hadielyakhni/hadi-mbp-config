@@ -18,9 +18,13 @@
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, ... }: let
+  outputs = inputs @ { self, nixpkgs, darwin, home-manager, nix-index-database, ... }: let
     username = "anton";
     system = "aarch64-darwin";
     hostname = "${username}-mbp";
@@ -36,6 +40,7 @@
         ./modules/system.nix
         ./modules/fonts.nix
         ./modules/zsh.nix
+        nix-index-database.nixosModules.nix-index
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
