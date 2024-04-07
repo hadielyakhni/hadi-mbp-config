@@ -34,6 +34,9 @@
       syntax on
       set backspace=indent,eol,start
       filetype plugin indent on
+      set wrap
+      set linebreak
+      set breakindent
       set number! relativenumber!
       set cursorline
       set cursorcolumn
