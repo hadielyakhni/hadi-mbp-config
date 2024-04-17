@@ -5,9 +5,9 @@
 ##      "FiraCode"
 #      # "JetBrainsMono"
 #    ]; })
-    # (google-fonts.override { fonts = [
-    #   "Roboto Mono"
-    # ]; })
+    (google-fonts.override { fonts = [
+      "Inter"
+    ]; })
   ];
   fonts.fontDir.enable = true;
 }
