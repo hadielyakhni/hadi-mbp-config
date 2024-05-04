@@ -12,6 +12,7 @@
       ./gpg.nix
       ./htop.nix
       ./iproute2mac.nix
+      ./nushell.nix
       ./minecraft.nix
       ./radare2.nix
       ./ripgrep.nix
@@ -19,6 +20,7 @@
       ./tmux.nix
       ./utm.nix
       ./vim.nix
+      ./vscode.nix
       ./wireguard.nix
       ./zsh.nix
     ];
