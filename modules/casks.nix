@@ -13,6 +13,7 @@ _:
 
   # Cybersecurity
   "burp-suite"
+  "zap"
 
   # Microsoft junk I need for work
   # uninstalling these is a pain, here's a guide:
