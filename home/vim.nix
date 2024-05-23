@@ -22,6 +22,7 @@
       coc-python
       coc-snippets
       coc-docker
+      coc-markdownlint
       copilot-vim
       vim-polyglot # Language pack supporting a wide array of languages.
       vim-lightline-coc # Lightweight statusline/tabline, integrates with CoC. Customize in `g:lightline`.
@@ -66,6 +67,12 @@
 
       " Use <CR> (Enter) to accept completion suggestion
       inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+      " GoTo code navigation
+      nmap <silent> gd <Plug>(coc-definition)
+      nmap <silent> gy <Plug>(coc-type-definition)
+      nmap <silent> gi <Plug>(coc-implementation)
+      nmap <silent> gr <Plug>(coc-references)
 
       " Lightline configuration - Set colorscheme for Lightline
       let g:lightline = { 'colorscheme': 'wombat' }

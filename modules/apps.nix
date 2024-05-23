@@ -17,6 +17,7 @@
 
     brews = [
       # I try not to use brews, but sometimes it's necessary
+      "mfterm" # sshfs is broken on macos on nixpkgs
     ];
 
     # apps removed from this option will not be uninstalled automatically
