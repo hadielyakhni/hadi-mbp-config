@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, ...}:
 {
   imports =
     [
@@ -40,6 +40,9 @@
     # changes in each release.
     stateVersion = "23.11";
   };
+
+  # allow unfree packages to be installed
+  nixpkgs.config.allowUnfree = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

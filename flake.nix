@@ -2,35 +2,47 @@
   description = "Anton's nix-darwin MBP M2Pro Mac configuration";
 
   inputs = {
-    # nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-23.11-darwin";
-
-    # home-manager, used for managing user configuration
-    home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
-      # The `follows` keyword in inputs is used for inheritance.
-      # Here, `inputs.nixpkgs` of home-manager is kept consistent with the `inputs.nixpkgs` of the current flake,
-      # to avoid problems caused by different versions of nixpkgs dependencies.
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
-
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    
     darwin = {
       url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
+
+    # home-manager, used for managing user configuration
+    home-manager = {
+      url = "github:nix-community/home-manager/release-23.11";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+    
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, darwin, home-manager, nix-index-database, ... }: let
+  outputs = inputs @ { self, nixpkgs-darwin, nixpkgs-unstable, darwin, home-manager, nix-index-database, ... }: let
     username = "anton";
     system = "aarch64-darwin";
     hostname = "${username}-mbp";
     specialArgs = inputs // {
       inherit username hostname system;
+      pkgs = import nixpkgs-darwin {
+        system = "aarch64-darwin";
+        config = {
+          allowUnfree = true;
+        };
+      };
+      unstablePkgs = import nixpkgs-unstable {
+        system = "aarch64-darwin";
+        config = {
+          allowUnfree = true;
+          allowBroken = true;
+        };
+      };
     };
+
   in {
     darwinConfigurations."${hostname}" = darwin.lib.darwinSystem {
       inherit system specialArgs;
@@ -46,9 +58,14 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = specialArgs;
-          home-manager.users.${username} = import ./home;
+          home-manager.users.${username} = import ./home {
+            pkgs = specialArgs.pkgs;
+            unstablePkgs = specialArgs.unstablePkgs;
+            username = specialArgs.username;
+          };
         }
       ];
     };
   };
 }
+
