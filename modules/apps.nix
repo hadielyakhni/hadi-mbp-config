@@ -4,6 +4,8 @@
     (pkgs.python3.withPackages (python-pkgs: [
       python-pkgs.virtualenv
       python-pkgs.pip
+      python-pkgs.pylint
+      python-pkgs.jedi  # autocompletion for python nvim
     ]))
   ];
 
