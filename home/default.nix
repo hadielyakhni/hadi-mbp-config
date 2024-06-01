@@ -22,6 +22,7 @@
       ./utm.nix
       ./vim.nix
       ./vscode.nix
+      ./wget.nix
       ./wireguard.nix
       ./zsh.nix
     ];
