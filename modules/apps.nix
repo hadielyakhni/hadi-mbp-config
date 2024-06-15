@@ -7,6 +7,7 @@
       python-pkgs.pylint
       python-pkgs.jedi  # autocompletion for python nvim
       python-pkgs.openai
+      python-pkgs.frida-tools
     ]))
   ];
 
