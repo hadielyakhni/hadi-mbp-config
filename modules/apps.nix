@@ -1,13 +1,12 @@
-{ pkgs, ... }:
+{ pkgs, unstablePkgs, ... }:
 {
   environment.systemPackages = [
-    (pkgs.python3.withPackages (python-pkgs: [
+    (unstablePkgs.python3.withPackages (python-pkgs: [
       python-pkgs.virtualenv
       python-pkgs.pip
       python-pkgs.pylint
       python-pkgs.jedi  # autocompletion for python nvim
       python-pkgs.openai
-      python-pkgs.frida-tools
     ]))
   ];
 
@@ -22,6 +21,7 @@
     brews = [
       # I try not to use brews, but sometimes it's necessary
       "mfterm" # sshfs is broken on macos on nixpkgs
+      "cliclick" # for automating mouse clicks
     ];
 
     # apps removed from this option will not be uninstalled automatically
