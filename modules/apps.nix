@@ -22,6 +22,8 @@
       # I try not to use brews, but sometimes it's necessary
       "mfterm" # sshfs is broken on macos on nixpkgs
       "cliclick" # for automating mouse clicks
+      "gdal" # geospatial data, dinedine project
+      # "flutter" # for mobile development
     ];
 
     # apps removed from this option will not be uninstalled automatically

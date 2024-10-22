@@ -11,6 +11,9 @@ _:
   # Utilities
   "raycast"
 
+  # xcode
+  "copilot-for-xcode"
+
   # Cybersecurity
   "burp-suite"
   "zap"
@@ -22,4 +25,6 @@ _:
   "microsoft-teams"
   "microsoft-excel"
   "microsoft-auto-update"  # the above casks depend on this (writing it here to remember)
+
+  "flutter"
 ]

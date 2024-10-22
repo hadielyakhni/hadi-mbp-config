@@ -7,6 +7,7 @@
       ./editorconfig.nix
       ./fd.nix
       ./ffmpeg.nix
+      # ./flutter.nix
       ./gh.nix
       ./git.nix
       ./gpg.nix
@@ -17,12 +18,14 @@
       ./platformio.nix
       ./radare2.nix
       ./ripgrep.nix
+      ./ruby.nix
       ./telegram.nix
       ./tmux.nix
       ./utm.nix
       ./vim.nix
       ./vscode.nix
       ./wget.nix
+      ./wkhtmltopdf.nix
       ./wireguard.nix
       ./zsh.nix
     ];
