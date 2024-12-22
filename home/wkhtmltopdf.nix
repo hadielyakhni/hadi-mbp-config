@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-     wkhtmltopdf-bin
+     pkgsx86_64Darwin.wkhtmltopdf-bin
   ];
 }

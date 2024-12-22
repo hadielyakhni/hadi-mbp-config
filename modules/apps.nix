@@ -24,6 +24,7 @@
       "cliclick" # for automating mouse clicks
       "gdal" # geospatial data, dinedine project
       # "flutter" # for mobile development
+      "apify-cli"
     ];
 
     # apps removed from this option will not be uninstalled automatically
