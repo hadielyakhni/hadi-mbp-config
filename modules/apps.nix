@@ -25,6 +25,8 @@
       "gdal" # geospatial data, dinedine project
       # "flutter" # for mobile development
       "apify-cli"
+
+      "aircrack-ng"
     ];
 
     # apps removed from this option will not be uninstalled automatically
