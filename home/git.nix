@@ -23,13 +23,21 @@ in
       push.autoSetupRemote = true;
       # Reuse merge conflict fixes when rebasing
       rerere.enabled = true;
+      fetch = {
+        writeCommitGraph = true;
+      };
 
-      core.editor = "vim";
+      core = {
+        editor = "vim";
+        untrackedcache = true;
+        fsmonitor = true;
+      };
     };
     lfs.enable = true;
 
     # syntax highlighted diffs
-    difftastic.enable = true;
+    # difftastic.enable = true;
+    diff-so-fancy.enable = true;
     ignores = [ ".direnv" ".idea" ".DS_Store" ];
   };
 }
