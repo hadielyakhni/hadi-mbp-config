@@ -10,6 +10,7 @@ _:
 
   # Utilities
   "raycast"
+  "lulu"
 
   # xcode
   "copilot-for-xcode"
