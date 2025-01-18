@@ -5,7 +5,7 @@
   # create an alias for ffmpeg_5 
 
   home.packages = with pkgs; [
-     ffmpeg_5
+     ffmpeg_6
   ];
 
   programs.zsh.initExtra = ''

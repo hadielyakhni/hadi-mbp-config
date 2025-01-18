@@ -44,4 +44,5 @@
 
   # use touch id for sudo auth
   security.pam.enableSudoTouchIdAuth = true;
+  system.stateVersion = 4;
 }

@@ -2,27 +2,23 @@
   description = "Anton's nix-darwin MBP M2Pro Mac configuration";
 
   inputs = {
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-23.11-darwin";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     
     darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:LnL7/nix-darwin/nix-darwin-24.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
     # home-manager, used for managing user configuration
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
-    };
   };
 
-  outputs = inputs @ { self, nixpkgs-darwin, nixpkgs-unstable, darwin, home-manager, nix-index-database, ... }: let
+  outputs = inputs @ { self, nixpkgs-darwin, nixpkgs-unstable, darwin, home-manager, ... }: let
     username = "anton";
     system = "aarch64-darwin";
     hostname = "${username}-mbp";
@@ -50,9 +46,7 @@
         ./modules/nix-core.nix
         ./modules/apps.nix
         ./modules/system.nix
-        ./modules/fonts.nix
         ./modules/zsh.nix
-        nix-index-database.nixosModules.nix-index
         home-manager.darwinModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

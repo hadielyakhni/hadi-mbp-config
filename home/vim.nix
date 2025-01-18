@@ -19,7 +19,7 @@
       coc-json
       coc-css
       coc-html
-      coc-python
+      coc-pyright
       coc-snippets
       coc-docker
       coc-markdownlint
