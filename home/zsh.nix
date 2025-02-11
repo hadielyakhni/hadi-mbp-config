@@ -1,7 +1,8 @@
 {...}: {
   programs.zsh = {
     autocd = true;
-    defaultKeymap = "emacs";
+    # TODO: choose your keymap
+    # defaultKeymap = "emacs";
     # TODO: add dirHashes: https://blog.myelin.ch/2018/12/14/named-directory-hash-table.html
     #  https://mynixos.com/home-manager/option/programs.zsh.dirHashes
     enable = true;
@@ -14,10 +15,10 @@
       enable = true;
       plugins = [
         "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
-        "docker"
       ];
       theme = "fishy";
     };
+    # TODO: what is the below line?
     initExtra = ''
       ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg(=5'
     '';

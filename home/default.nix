@@ -2,31 +2,23 @@
 {
   imports =
     [
-      ./btop.nix
-      ./direnv.nix
-      ./editorconfig.nix
-      ./fd.nix
-      ./ffmpeg.nix
-      # ./flutter.nix
+      ./chrome.nix
+      ./discord.nix
+      ./firefox.nix
       ./gh.nix
       ./git.nix
-      ./gpg.nix
-      ./htop.nix
-      ./iproute2mac.nix
-      ./minecraft.nix
-      ./nushell.nix
-      ./platformio.nix
-      ./radare2.nix
+      ./rectangle.nix
       ./ripgrep.nix
-      ./ruby.nix
+      ./spotify.nix
       ./telegram.nix
       ./tmux.nix
-      ./utm.nix
       ./vim.nix
+      ./vlc.nix
+      # TODO: configure vscode
       ./vscode.nix
       ./wget.nix
+      ./whatsapp.nix
       ./wkhtmltopdf.nix
-      ./wireguard.nix
       ./zsh.nix
     ];
 

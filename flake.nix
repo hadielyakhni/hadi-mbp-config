@@ -19,7 +19,7 @@
   };
 
   outputs = inputs @ { self, nixpkgs-darwin, nixpkgs-unstable, darwin, home-manager, ... }: let
-    username = "anton";
+    username = "hadielyakhni";
     system = "aarch64-darwin";
     hostname = "${username}-mbp";
     specialArgs = inputs // {
