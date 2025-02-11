@@ -21,15 +21,12 @@
       coc-html
       coc-pyright
       coc-snippets
-      coc-docker
       coc-markdownlint
       copilot-vim
       vim-polyglot # Language pack supporting a wide array of languages.
       vim-lightline-coc # Lightweight statusline/tabline, integrates with CoC. Customize in `g:lightline`.
       vim-gitgutter # Shows git diff in the gutter. Customize with `:help gitgutter`.
-      ale # Asynchronous linting/fixing framework. Configure with `:help ale`.
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
-      vim-be-good # Vim learning game. Use `:VimBeGood` to start.
     ];
     extraConfig = ''
       syntax on

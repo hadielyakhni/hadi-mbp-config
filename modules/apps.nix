@@ -21,13 +21,9 @@
 
     brews = [
       # The brews you don't find in nixpkgs
-      # TODO: try to get them from nixpgs
-      "node"
       "postgresql@14"
       "python@3.11"
       "python@3.12"
-      "tig"
-      "tree"
       "virtualenv"
     ];
 
@@ -35,9 +31,16 @@
     masApps = {
     };
 
-
-    casks = pkgs.callPackage ./casks.nix { };
-    # remove casks from quarantine
+    # the apps that doesn't work well with nix
+    casks = [
+      "zwift"
+      "betterdisplay"
+      "notion"
+      "pycharm"
+      "visual-studio-code"
+      "whatsapp"
+      "github"
+    ];
     caskArgs.no_quarantine = true;
   };
 }

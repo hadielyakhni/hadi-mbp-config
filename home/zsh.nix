@@ -1,12 +1,10 @@
-{...}: {
+{ hostname, ...}: {
   programs.zsh = {
-    autocd = true;
-    # TODO: choose your keymap
-    # defaultKeymap = "emacs";
-    # TODO: add dirHashes: https://blog.myelin.ch/2018/12/14/named-directory-hash-table.html
-    #  https://mynixos.com/home-manager/option/programs.zsh.dirHashes
     enable = true;
-    enableAutosuggestions = true;
+    autocd = true;
+    defaultKeymap = "emacs";
+    # TODO: add dirHashes: https://blog.myelin.ch/2018/12/14/named-directory-hash-table.html
+    autosuggestion.enable = true;
     enableCompletion = true;
     history.share = true;
     syntaxHighlighting.enable = true;
@@ -16,12 +14,17 @@
       plugins = [
         "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
       ];
-      theme = "fishy";
+      theme = "simple";
     };
-    # TODO: what is the below line?
     initExtra = ''
-      ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg(=5'
+      export PATH=$PATH:$HOME/Dev/odoo/scripts/db_manager
+      source ~/Dev/odoo/scripts/o
+      source ~/Dev/odoo/scripts/o_completion
+      source ~/Dev/odoo/scripts/db_manager/zsh_completion
     '';
+    shellAliases = {
+      switch = "darwin-rebuild switch --flake ~/config/nix#'${hostname}'";
+    };
   };
   programs.fzf = {
     enable = true;

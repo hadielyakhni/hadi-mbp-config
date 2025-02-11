@@ -2,23 +2,15 @@
 {
   imports =
     [
-      ./chrome.nix
-      ./discord.nix
-      ./firefox.nix
-      ./gh.nix
+      ./misc.nix
       ./git.nix
-      ./rectangle.nix
-      ./ripgrep.nix
-      ./spotify.nix
-      ./telegram.nix
       ./tmux.nix
       ./vim.nix
-      ./vlc.nix
       # TODO: configure vscode
-      ./vscode.nix
-      ./wget.nix
-      ./whatsapp.nix
-      ./wkhtmltopdf.nix
+      # ./vscode.nix
+      # ...
+      # TODO: whatsapp is causing build error
+      # ./whatsapp.nix
       ./zsh.nix
     ];
 
