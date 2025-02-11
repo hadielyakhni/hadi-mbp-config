@@ -56,7 +56,7 @@ in
         nb = "checkout -b";
         pf = "push --force-with-lease";
         cp = "cherry-pick";
-      }
+      };
 
     };
     
