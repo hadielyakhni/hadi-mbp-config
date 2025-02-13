@@ -17,6 +17,5 @@
     rectangle
     spotify
     telegram-desktop
-    google-chrome
   ];
 }

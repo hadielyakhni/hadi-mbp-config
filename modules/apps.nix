@@ -40,6 +40,7 @@
       "visual-studio-code"
       "whatsapp"
       "github"
+      "google-chrome"
     ];
     caskArgs.no_quarantine = true;
   };
