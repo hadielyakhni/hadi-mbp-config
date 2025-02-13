@@ -25,6 +25,7 @@
       "python@3.11"
       "python@3.12"
       "virtualenv"
+      "coreutils"
     ];
 
     # apps removed from this option will not be uninstalled automatically
