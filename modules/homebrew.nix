@@ -42,6 +42,7 @@
       "whatsapp"
       "github"
       "google-chrome"
+      "vlc"
     ];
     caskArgs.no_quarantine = true;
   };
