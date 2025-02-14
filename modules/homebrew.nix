@@ -1,16 +1,5 @@
 { pkgs, unstablePkgs, ... }:
 {
-  # TODO: uncomment and understand the below python config
-  # environment.systemPackages = [
-  #   (unstablePkgs.python3.withPackages (python-pkgs: [
-  #     python-pkgs.virtualenv
-  #     python-pkgs.pip
-  #     python-pkgs.pylint
-  #     python-pkgs.jedi  # autocompletion for python nvim
-  #     python-pkgs.openai
-  #   ]))
-  # ];
-
   homebrew = {
     enable = true;
     onActivation = {
@@ -42,6 +31,7 @@
       "whatsapp"
       "github"
       "google-chrome"
+      "vlc"
     ];
     caskArgs.no_quarantine = true;
   };

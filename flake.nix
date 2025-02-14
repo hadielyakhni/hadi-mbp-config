@@ -45,7 +45,7 @@
       inherit system specialArgs;
       modules = [
         ./modules/nix-core.nix
-        ./modules/apps.nix
+        ./modules/homebrew.nix
         ./modules/system.nix
         ./modules/zsh.nix
         mac-app-util.darwinModules.default
