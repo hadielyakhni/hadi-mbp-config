@@ -36,26 +36,11 @@ in
       };
 
       aliases = {
-        ac = "!git add -A && git commit -m";
-        sta = "status -s";
-        st = "status";
         conf = "config --global --edit";
-        cge = "config --global --edit";
-        ci = "commit";
-        co = "checkout";
         cod = "checkout .";
         rh = "reset HEAD";
-        aa = "add -A";
         cdf = "clean -df";
         p = "pull --ff-only";
-        br = "branch";
-        bra = "branch -a";
-        ca = "commit --amend";
-        cwa = "commit -a --amend";
-        cw = "commit -a --amend --no-edit";
-        nb = "checkout -b";
-        pf = "push --force-with-lease";
-        cp = "cherry-pick";
       };
 
     };
