@@ -10,6 +10,13 @@ in
     # TODO: use different email, depending on the current
     #  directory. See "So You Think You Know Git - FOSDEM 2024"
     userEmail = "hael@odoo.com"; 
+    aliases = {
+      conf = "config --global --edit";
+      cod = "checkout .";
+      rh = "reset HEAD";
+      cdf = "clean -df";
+      p = "pull --ff-only";
+    };
     extraConfig = {
       init.defaultBranch = "main";
       # commit.gpgSign = true;
@@ -34,15 +41,6 @@ in
         # untrackedcache = true;
         # fsmonitor = true;
       };
-
-      aliases = {
-        conf = "config --global --edit";
-        cod = "checkout .";
-        rh = "reset HEAD";
-        cdf = "clean -df";
-        p = "pull --ff-only";
-      };
-
     };
     
     # lfs.enable = true;
