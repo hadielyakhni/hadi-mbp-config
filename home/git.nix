@@ -22,9 +22,9 @@ in
       # commit.gpgSign = true;
       # gpg.program = "${config.programs.gpg.package}/bin/gpg2";
 
-      # merge.conflictStyle = "zdiff3";
-      # commit.verbose = true;
-      # diff.algorithm = "histogram";
+      merge.conflictStyle = "zdiff3";
+      commit.verbose = true;
+      diff.algorithm = "histogram";
       # log.date = "iso";
       # column.ui = "auto";
       branch.sort = "committerdate";
@@ -45,9 +45,10 @@ in
     
     # lfs.enable = true;
 
-    # syntax highlighted diffs
-    # difftastic.enable = true;
-    diff-so-fancy.enable = true;
+    difftastic = {
+      enable = true;
+      display = "inline";
+    };
     ignores = [ ".idea" ".DS_Store" ];
   };
 }
