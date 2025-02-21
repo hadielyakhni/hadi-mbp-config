@@ -12,10 +12,8 @@ in
     userEmail = "hael@odoo.com"; 
     aliases = {
       conf = "config --global --edit";
-      cod = "checkout .";
       rh = "reset HEAD";
       cdf = "clean -df";
-      p = "pull --ff-only";
     };
     extraConfig = {
       init.defaultBranch = "main";
