@@ -22,6 +22,7 @@
       copilot-vim
       vim-gitgutter # Shows git diff in the gutter. Customize with `:help gitgutter`.
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
+      vim-surround
     ];
     extraConfig = ''
       syntax on
