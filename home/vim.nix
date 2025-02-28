@@ -91,9 +91,6 @@
 	-- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
-	-- Nerdtree
-	vim.keymap.set("n", "<C-n>", "<cmd>NERDTreeToggle<CR>")
     '';
   };
 }
