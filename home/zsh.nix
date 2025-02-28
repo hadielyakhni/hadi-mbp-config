@@ -23,7 +23,7 @@
       source ~/Dev/odoo/scripts/db_manager/zsh_completion
     '';
     shellAliases = {
-      switch = "darwin-rebuild switch --flake ~/config/nix#'${hostname}'";
+      switch = "darwin-rebuild switch --flake ~/config#'${hostname}'";
     };
   };
   programs.fzf = {
