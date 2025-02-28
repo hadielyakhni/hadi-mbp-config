@@ -1,0 +1,36 @@
+syntax on
+set backspace=indent,eol,start
+filetype plugin indent on
+set nowrap
+set linebreak
+set breakindent
+set number relativenumber
+set cursorline
+set cursorcolumn
+set showmatch
+set matchtime=2
+set termguicolors
+set emoji
+
+# Key maps
+let g:mapleader = " "
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+xnoremap <leader>p "_dP
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+# Fuzzy search
+set fzf-vim
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+
+# vim-surround
+Plug 'tpope/vim-surround'
+

@@ -6,11 +6,6 @@
       ./git.nix
       ./tmux.nix
       ./vim.nix
-      # TODO: configure vscode
-      # ./vscode.nix
-      # ...
-      # TODO: whatsapp is causing build error
-      # ./whatsapp.nix
       ./zsh.nix
     ];
 

@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  home.file = {
+    ".ideavimrc".source = ./dotfiles/.ideavimrc;
+  };
+
   programs = {
     ripgrep.enable = true;
   };
