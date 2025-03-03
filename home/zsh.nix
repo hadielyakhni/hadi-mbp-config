@@ -12,7 +12,8 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "git" # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+        "git"
+	"vi-mode"
       ];
       theme = "simple";
     };
