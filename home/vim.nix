@@ -2,12 +2,10 @@
 # - Add CoC (Conquer of Completion) configuration? (see Anthon's config)
 #   - Does is include LSP support? Or needs to install smtg else? (like lsp-zeros)
 # - Add ALE (Asynchronous Lint Engine) configuration? (see Anthon's config)
-# - Add vim-polygot? (see Anthon's config)
 # - Add harpoon?
-# - Add telescope? or fzf-vim? or both?
+# - Add telescope?
 # - Add treesitter? or something else already does the job here?
-# - Add undotree?
-# - Add git integration (fugitive)? or gitgutter is enough?
+# - Add fugitive? (adds functionality to fzf too, like searching commits
 
 {pkgs, nixvim, ...}: {
   programs.neovim = {
@@ -23,11 +21,23 @@
       rainbow # Colors matching parentheses. No further configuration required.
       jellybeans-vim
       nerdtree # Filesystem explorer. Toggle with <Ctrl-n>, customize with `:help NERDTree`.
-      # fzf-vim -- Fuzzy file search integration. Invoke with :Files, :GFiles, etc. :Rg for ripgrep.
       copilot-vim
       vim-gitgutter # Shows git diff in the gutter. Customize with `:help gitgutter`.
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
       vim-surround
+      # to be revisited and maybe removed #
+      fzf-vim
+      coc-nvim
+      coc-tsserver
+      coc-json
+      coc-css
+      coc-html
+      coc-pyright
+      coc-snippets
+      coc-docker
+      coc-markdownlint
+      vim-lightline-coc
+      ale # for linting
     ];
     extraConfig = ''
 	colorscheme jellybeans
@@ -88,6 +98,20 @@
 	-- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+	-- FZF --
+	vim.g.fzf_layout = { window = { width = 0.9, height = 0.6 } }
+
+	-- COC --
+	vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
+	vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent = true })
+	vim.keymap.set('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
+	vim.keymap.set('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
+	vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent = true })
+
+	-- ALE --
+	vim.g.ale_fix_on_save = 1
+	vim.g.ale_linters_explicit = 1
     '';
   };
 }

@@ -22,6 +22,9 @@
       source ~/Dev/odoo/scripts/o
       source ~/Dev/odoo/scripts/o_completion
       source ~/Dev/odoo/scripts/db_manager/zsh_completion
+
+      # Copy to clipboard
+      c() { "$@" | pbcopy }
     '';
     shellAliases = {
       switch = "darwin-rebuild switch --flake ~/config#'${hostname}'";
