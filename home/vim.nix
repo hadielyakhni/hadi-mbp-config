@@ -6,6 +6,7 @@
 # - Add telescope?
 # - Add treesitter? or something else already does the job here?
 # - Add fugitive? (adds functionality to fzf too, like searching commits
+# - Add ale? (For linting -- better than coc-eslint and coc-prettier?)
 
 {pkgs, nixvim, ...}: {
   programs.neovim = {
@@ -37,7 +38,7 @@
       coc-docker
       coc-markdownlint
       vim-lightline-coc
-      ale # for linting
+      ale
     ];
     extraConfig = ''
 	colorscheme jellybeans
@@ -104,14 +105,26 @@
 
 	-- COC --
 	vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
+	-- see: https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
+	vim.g.coc_user_config = {
+	  ["diagnostic.displayByAle"] = true,
+	}
+	vim.keymap.set( 'i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"', { silent = true, expr = true })
 	vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent = true })
 	vim.keymap.set('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
 	vim.keymap.set('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
 	vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent = true })
 
 	-- ALE --
+	-- see: https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
 	vim.g.ale_fix_on_save = 1
-	vim.g.ale_linters_explicit = 1
+	vim.b.ale_fixers = {"prettier", "eslint"}
+
+	-- DIAGNOSTICS --
+	-- see: https://neovim.io/doc/user/diagnostic.html
+	vim.fn.sign_define('DiagnosticSignError', { text = '>>', texthl = 'DiagnosticError' })
+	vim.fn.sign_define('DiagnosticSignWarning', { text = "--", texthl = 'DiagnosticWarning' })
     '';
   };
 }
+
