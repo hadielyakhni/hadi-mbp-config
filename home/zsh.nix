@@ -28,6 +28,7 @@
     '';
     shellAliases = {
       switch = "darwin-rebuild switch --flake ~/config#'${hostname}'";
+      reload = "source ~/.zshrc";
     };
   };
   programs.fzf = {
