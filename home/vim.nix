@@ -120,12 +120,18 @@
 	-- see: https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
 	vim.g.ale_fix_on_save = 1
 	vim.b.ale_fixers = {"prettier", "eslint"}
+	vim.keymap.set('n', '<F8>', '<Plug>(ale_fix)', { silent = true })
+	vim.keymap.set("n", "<C-k>", "<Plug>(ale_previous_wrap)", { silent = true })
+	vim.keymap.set("n", "<C-j>", "<Plug>(ale_next_wrap)", { silent = true })
 
 	-- DIAGNOSTICS --
 	-- see: https://neovim.io/doc/user/diagnostic.html
-	vim.fn.sign_define('DiagnosticSignError', { text = '>>', texthl = 'DiagnosticError' })
-	vim.fn.sign_define('DiagnosticSignWarning', { text = "--", texthl = 'DiagnosticWarning' })
-    	vim.diagnostic.get(0, { severity = { min = vim.diagnostic.severity.ERROR } })
+	vim.fn.sign_define('DiagnosticSignError', { text = '>>', texthl = 'RedSign' })
+	vim.fn.sign_define('DiagnosticSignWarn', { text = "--", texthl = 'YellowSign' })
+	vim.fn.sign_define('DiagnosticSignInfo', { text = "==", texthl = 'BlueSign' })
+	vim.keymap.set("n", "<leader>e", function()
+	  vim.diagnostic.open_float(0, { scope = "line" })
+	end, { noremap = true, silent = true })
     '';
   };
 }
