@@ -26,6 +26,7 @@
       vim-gitgutter # Shows git diff in the gutter. Customize with `:help gitgutter`.
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
       vim-surround
+      vim-wakatime
       # to be revisited and maybe removed #
       fzf-vim
       coc-nvim
@@ -124,6 +125,7 @@
 	-- see: https://neovim.io/doc/user/diagnostic.html
 	vim.fn.sign_define('DiagnosticSignError', { text = '>>', texthl = 'DiagnosticError' })
 	vim.fn.sign_define('DiagnosticSignWarning', { text = "--", texthl = 'DiagnosticWarning' })
+    	vim.diagnostic.get(0, { severity = { min = vim.diagnostic.severity.ERROR } })
     '';
   };
 }
