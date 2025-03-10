@@ -6,15 +6,19 @@
 
   programs = {
     ripgrep.enable = true;
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 
   home.packages = with pkgs; [
     # Packages
     (pkgs.python311.withPackages (ppkgs: [
-	ppkgs.pip
-	ppkgs.virtualenv
-	ppkgs.pylint
-	ppkgs.jedi
+      ppkgs.pip
+      ppkgs.virtualenv
+      ppkgs.pylint
+      ppkgs.jedi
     ]))
     nodejs_23
     pkgsx86_64Darwin.wkhtmltopdf-bin

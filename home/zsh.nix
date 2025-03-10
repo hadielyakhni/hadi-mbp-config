@@ -31,8 +31,4 @@
       reload = "source ~/.zshrc";
     };
   };
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }
