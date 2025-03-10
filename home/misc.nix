@@ -10,6 +10,11 @@
 
   home.packages = with pkgs; [
     # Packages
+    (pkgs.python311.withPackages (ppkgs: [
+	ppkgs.pip
+	ppkgs.virtualenv
+	ppkgs.jedi
+    ]))
     nodejs_23
     pkgsx86_64Darwin.wkhtmltopdf-bin
     tig

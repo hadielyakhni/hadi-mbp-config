@@ -11,9 +11,6 @@
     brews = [
       # The brews you don't find in nixpkgs
       "postgresql@14"
-      "python@3.11"
-      "python@3.12"
-      "virtualenv"
       "coreutils"
     ];
 
