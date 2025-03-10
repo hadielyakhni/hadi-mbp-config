@@ -13,6 +13,7 @@
     (pkgs.python311.withPackages (ppkgs: [
 	ppkgs.pip
 	ppkgs.virtualenv
+	ppkgs.pylint
 	ppkgs.jedi
     ]))
     nodejs_23
