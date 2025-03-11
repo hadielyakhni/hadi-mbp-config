@@ -15,10 +15,6 @@
       "coreutils"
     ];
 
-    # apps removed from this option will not be uninstalled automatically
-    masApps = {
-    };
-
     # the apps that doesn't work well with nix
     casks = [
       "zwift"

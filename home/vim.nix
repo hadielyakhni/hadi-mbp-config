@@ -27,6 +27,7 @@
       vim-commentary # Commenting plugin. Use `gcc` to comment out a line, `gc` to comment out the target of a motion.
       vim-surround
       vim-wakatime
+      vim-abolish
       # to be revisited and maybe removed #
       fzf-vim
       coc-nvim

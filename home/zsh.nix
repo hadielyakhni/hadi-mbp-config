@@ -13,7 +13,7 @@
       enable = true;
       plugins = [
         "git"
-	"vi-mode"
+        "vi-mode"
       ];
       theme = "simple";
     };
