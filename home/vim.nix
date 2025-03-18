@@ -39,6 +39,7 @@
       coc-snippets
       coc-docker
       coc-markdownlint
+      coc-sh
       vim-lightline-coc
       ale
     ];
@@ -106,7 +107,7 @@
 	vim.g.fzf_layout = { window = { width = 0.9, height = 0.6 } }
 
 	-- COC --
-	vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
+	-- vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
 	-- see: https://github.com/neoclide/coc.nvim/blob/master/doc/coc.txt
 	vim.g.coc_user_config = {
 	  ["diagnostic.displayByAle"] = true,
