@@ -7,6 +7,7 @@
 # - Add treesitter? or something else already does the job here?
 # - Add fugitive? (adds functionality to fzf too, like searching commits
 # - Add ale? (For linting -- better than coc-eslint and coc-prettier?)
+# - Add vim-which-key? (for keybindings reminders)
 
 {pkgs, nixvim, ...}: {
   programs.neovim = {
@@ -105,6 +106,12 @@
 
 	-- FZF --
 	vim.g.fzf_layout = { window = { width = 0.9, height = 0.6 } }
+	vim.keymap.set("n", "<Leader>ff", ":GFiles<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>fg", ":Rg<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>fl", ":BLines<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>fr", ":History<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>fh", ":Helptags<CR>", { noremap = true, silent = true })
 
 	-- COC --
 	-- vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
