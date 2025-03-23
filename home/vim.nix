@@ -29,8 +29,10 @@
       vim-surround
       vim-wakatime
       vim-abolish
-      # to be revisited and maybe removed #
       fzf-vim
+      vim-fugitive
+      vim-rhubarb
+      # to be revisited and maybe removed #
       coc-nvim
       coc-tsserver
       coc-json
