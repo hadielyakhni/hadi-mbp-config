@@ -81,22 +81,21 @@
     	-- KEYMAPS --
     	vim.g.mapleader = " "
 
-	vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-	vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+	vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, desc = "Move the selected lines down" })
+	vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, desc = "Move the selected lines up" })
 	vim.keymap.set("n", "<C-d>", "<C-d>zz")
 	vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 	-- do not lose the clipboard content after pasting.
-	vim.keymap.set("x", "<leader>p", [["_dP]])
+	vim.keymap.set("x", "<leader>p", [["_dP]], { noremap = true, desc = "Paste without replacing the clipboard" })
 
 	-- copy to system clipboard.
-	vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-	vim.keymap.set("n", "<leader>Y", [["+Y]])
+	vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { noremap = true, desc = "Copy to system clipboard" })
+	vim.keymap.set("n", "<leader>Y", [["+Y]], { noremap = true, desc = "Copy line to system clipboard" })
 	
 	-- don't save into the clipboard. (clipboard has a better
 	-- name in nvim world, buffer or register or smth :P)
-	
-	vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
+	vim.keymap.set({"n", "v"}, "<leader>d", "\"_d", { noremap = true, desc = "Delete without saving into the clipboard" })
 	
 	-- TODO vim quickfix stuff... what is quickfix???
 	-- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -104,16 +103,16 @@
 	-- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 	-- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
-	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+	vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, desc = "Search and replace the word under the cursor" })
 
 	-- FZF --
 	vim.g.fzf_layout = { window = { width = 0.9, height = 0.6 } }
-	vim.keymap.set("n", "<Leader>ff", ":GFiles<CR>", { noremap = true, silent = true })
-	vim.keymap.set("n", "<Leader>fg", ":Rg<CR>", { noremap = true, silent = true })
-	vim.keymap.set("n", "<Leader>fl", ":BLines<CR>", { noremap = true, silent = true })
-	vim.keymap.set("n", "<Leader>fb", ":Buffers<CR>", { noremap = true, silent = true })
-	vim.keymap.set("n", "<Leader>fr", ":History<CR>", { noremap = true, silent = true })
-	vim.keymap.set("n", "<Leader>fh", ":Helptags<CR>", { noremap = true, silent = true })
+	vim.keymap.set("n", "<Leader>ff", ":GFiles<CR>", { silent = true, desc = "FZF git files" })
+	vim.keymap.set("n", "<Leader>fg", ":Rg<CR>", {  silent = true, desc = "FZF git grep" })
+	vim.keymap.set("n", "<Leader>fl", ":BLines<CR>", {  silent = true, desc = "FZF lines in the buffer" })
+	vim.keymap.set("n", "<Leader>fb", ":Buffers<CR>", { silent = true, desc = "FZF buffers" })
+	vim.keymap.set("n", "<Leader>fr", ":History<CR>", { silent = true, desc = "FZF history" })
+	vim.keymap.set("n", "<Leader>fh", ":Helptags<CR>", { silent = true, desc = "FZF help tags" })
 
 	-- COC --
 	-- vim.g.coc_global_extensions = { 'coc-json', 'coc-css', 'coc-html', 'coc-python', 'coc-snippets', 'coc-docker', 'coc-yaml' }
@@ -121,19 +120,19 @@
 	vim.g.coc_user_config = {
 	  ["diagnostic.displayByAle"] = true,
 	}
-	vim.keymap.set( 'i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"', { silent = true, expr = true })
-	vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent = true })
-	vim.keymap.set('n', 'gy', '<Plug>(coc-type-definition)', { silent = true })
-	vim.keymap.set('n', 'gi', '<Plug>(coc-implementation)', { silent = true })
-	vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent = true })
+	vim.keymap.set( 'i', '<CR>', 'coc#pum#visible() ? coc#pum#confirm() : "\\<CR>"', { noremap = true, silent = true, expr = true })
+	vim.keymap.set('n', 'gd', '<Plug>(coc-definition)', { silent = true, desc = "Go to definition" })
+	vim.keymap.set('n', 'gy', '<Plug>(coc-type-definition)', { silent = true, desc = "Go to type definition" })
+	vim.keymap.set('n', 'gi', '<Plug>(coc-implementation)', { silent = true, desc = "Go to implementation" })
+	vim.keymap.set('n', 'gr', '<Plug>(coc-references)', { silent = true, desc = "Go to references" })
 
 	-- ALE --
 	-- see: https://github.com/dense-analysis/ale/blob/master/doc/ale.txt
 	vim.g.ale_fix_on_save = 1
 	vim.b.ale_fixers = {"prettier", "eslint"}
-	vim.keymap.set('n', '<F8>', '<Plug>(ale_fix)', { silent = true })
-	vim.keymap.set("n", "<C-k>", "<Plug>(ale_previous_wrap)", { silent = true })
-	vim.keymap.set("n", "<C-j>", "<Plug>(ale_next_wrap)", { silent = true })
+	vim.keymap.set('n', '<F8>', '<Plug>(ale_fix)', { silent = true, desc = "Fix the current file" })
+	vim.keymap.set("n", "<C-k>", "<Plug>(ale_previous_wrap)", { silent = true, desc = "Go to the previous error" })
+	vim.keymap.set("n", "<C-j>", "<Plug>(ale_next_wrap)", { silent = true, desc = "Go to the next error" })
 
 	-- DIAGNOSTICS --
 	-- see: https://neovim.io/doc/user/diagnostic.html
