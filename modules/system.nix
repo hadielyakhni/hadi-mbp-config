@@ -18,6 +18,7 @@
     defaults = {
       dock = {
         autohide = false;
+	mru-spaces = false;
       };
     };
   };
