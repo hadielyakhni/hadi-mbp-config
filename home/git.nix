@@ -1,5 +1,6 @@
 { pkgs, lib, config, ... }:
 let
+  # TODO: what's this line? :)
   ssh = "${pkgs.openssh}/bin/ssh";
 in
 {
