@@ -7,6 +7,7 @@
       ./tmux.nix
       ./vim.nix
       ./zsh.nix
+      ./ssh.nix
     ];
 
   home = {
