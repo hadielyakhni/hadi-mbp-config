@@ -93,9 +93,11 @@
 	vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { noremap = true, desc = "Copy to system clipboard" })
 	vim.keymap.set("n", "<leader>Y", [["+Y]], { noremap = true, desc = "Copy line to system clipboard" })
 	
-	-- don't save into the clipboard. (clipboard has a better
-	-- name in nvim world, buffer or register or smth :P)
+	-- don't save into the clipboard.
 	vim.keymap.set({"n", "v"}, "<leader>d", "\"_d", { noremap = true, desc = "Delete without saving into the clipboard" })
+	vim.keymap.set({"n", "v"}, "<leader>D", "\"_D", { noremap = true, desc = "Delete to the end of the line without saving into the clipboard" })
+	vim.keymap.set({"n", "v"}, "<leader>c", "\"_c", { noremap = true, desc = "Change without saving into the clipboard" })
+	vim.keymap.set({"n", "v"}, "<leader>C", "\"_C", { noremap = true, desc = "Change to the end of the line without saving into the clipboard" })
 	
 	-- TODO vim quickfix stuff... what is quickfix???
 	-- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
