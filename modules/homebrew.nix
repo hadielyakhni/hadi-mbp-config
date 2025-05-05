@@ -25,6 +25,7 @@
       "whatsapp"
       "github"
       "google-chrome"
+      "microsoft-edge"
       "vlc"
     ];
     caskArgs.no_quarantine = true;
