@@ -31,5 +31,6 @@
     rectangle
     spotify
     telegram-desktop
+    zoom-us
   ];
 }
