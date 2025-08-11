@@ -24,6 +24,7 @@
     pkgsx86_64Darwin.wkhtmltopdf-bin
     tig
     tree
+    ngrok
 
     # Apps
     iterm2
