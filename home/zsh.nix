@@ -19,8 +19,7 @@
     };
     initExtra = ''
       export PATH=$PATH:$HOME/Dev/odoo/scripts/db_manager
-      source ~/Dev/odoo/scripts/o
-      source ~/Dev/odoo/scripts/o_completion
+      source ~/Dev/odoo/scripts/o/o
       source ~/Dev/odoo/scripts/db_manager/zsh_completion
 
       # Copy to clipboard
