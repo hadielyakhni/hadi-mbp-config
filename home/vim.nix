@@ -47,19 +47,36 @@
       ale
     ];
     extraConfig = ''
-	colorscheme jellybeans
 	let g:rainbow_active = 1
 	set laststatus=2
-	let g:airline_theme='bubblegum'
 	" NERDTree configuration - Toggle NERDTree with <Ctrl-n>
 
 	map <C-n> :NERDTreeToggle<CR>
 	let NERDTreeShowHidden=1
-
-	" Lightline configuration - Set colorscheme for Lightline
-	let g:lightline = { 'colorscheme': 'wombat' }
     '';
     extraLuaConfig = ''
+	-- THEME BASED ON SYSTEM MODE
+      local function system_dark()
+        local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
+	local result = handle:read("*a")
+	handle:close()
+      	if result:match("Dark") then
+	  return true
+	else
+	  return false
+	end
+      end
+
+      if system_dark() then
+        vim.cmd("colorscheme jellybeans")
+        vim.g.airline_theme = "bubblegum"
+        vim.g.lightline = { colorscheme = "wombat" }
+      else
+        vim.cmd("colorscheme morning")      -- light theme
+        vim.g.airline_theme = "luna"
+        vim.g.lightline = { colorscheme = "solarized_light" }
+      end
+
 	-- CONFIGS --
 	vim.cmd("syntax on")
 	vim.opt.backspace = { "indent", "eol", "start" }
