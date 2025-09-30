@@ -33,5 +33,6 @@
     spotify
     telegram-desktop
     zoom-us
+    slack
   ];
 }
