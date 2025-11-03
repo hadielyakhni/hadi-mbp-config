@@ -21,6 +21,7 @@
       "betterdisplay"
       "notion"
       "pycharm"
+      "webstorm"
       "visual-studio-code"
       "whatsapp"
       "github"
