@@ -28,6 +28,7 @@
       "google-chrome"
       "microsoft-edge"
       "vlc"
+      "cursor"
     ];
     caskArgs.no_quarantine = true;
   };
