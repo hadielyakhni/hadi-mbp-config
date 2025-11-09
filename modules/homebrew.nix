@@ -29,6 +29,7 @@
       "microsoft-edge"
       "vlc"
       "cursor"
+      "cold-turkey-blocker"
     ];
     caskArgs.no_quarantine = true;
   };
