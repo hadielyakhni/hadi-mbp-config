@@ -25,6 +25,7 @@
     tig
     tree
     ngrok
+    awscli2
 
     # Apps
     iterm2
