@@ -14,6 +14,7 @@
       plugins = [
         "git"
         "vi-mode"
+	"jsontools"
       ];
       theme = "simple";
     };
