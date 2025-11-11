@@ -27,6 +27,7 @@
       "github"
       "google-chrome"
       "microsoft-edge"
+      "firefox"
       "vlc"
       "cursor"
       "cold-turkey-blocker"
