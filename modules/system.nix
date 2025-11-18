@@ -11,8 +11,17 @@
   #
   ###################################################################################
 {
-  networking.hostName = hostname;
-  networking.computerName = hostname;
+  networking = {
+    hostName = hostname;
+    computerName = hostname;
+    dns = [
+      "1.1.1.3"
+      "1.0.0.3"
+    ];
+    knownNetworkServices = [
+     "Wi-Fi"
+    ];
+  };
 
   system = {
     defaults = {
