@@ -26,6 +26,7 @@
     tree
     ngrok
     awscli2
+    terraform
 
     # Apps
     iterm2
