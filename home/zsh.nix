@@ -19,6 +19,7 @@
       theme = "simple";
     };
     initExtra = ''
+      export PATH=$PATH:/opt/homebrew/opt/postgresql@16/bin
       export PATH=$PATH:$HOME/Dev/odoo/scripts/db_manager
       source ~/Dev/odoo/scripts/o/o
       source ~/Dev/odoo/scripts/db_manager/zsh_completion
