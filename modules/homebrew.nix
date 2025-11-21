@@ -11,7 +11,7 @@
 
     brews = [
       # The brews you don't find in nixpkgs
-      "postgresql@14"
+      # "postgresql@16"
       "coreutils"
     ];
 
