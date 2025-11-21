@@ -14,7 +14,7 @@
 
   home.packages = with pkgs; [
     # Packages
-    (pkgs.python311.withPackages (ppkgs: [
+    (pkgs.python312.withPackages (ppkgs: [
       ppkgs.pip
       ppkgs.virtualenv
       ppkgs.pylint
