@@ -10,9 +10,7 @@ in
     userName = "Hadi El Yakhni";
     userEmail = "hael@odoo.com"; 
     aliases = {
-      conf = "config --global --edit";
-      rh = "reset HEAD";
-      cdf = "clean -df";
+      # mostly using oh-my-zsh git aliases
     };
     extraConfig = {
       init.defaultBranch = "main";
@@ -23,10 +21,6 @@ in
       core = {
         editor = "vim";
       };
-    };
-    difftastic = {
-      enable = true;
-      display = "inline";
     };
     ignores = [ ".idea" ".DS_Store" ];
   };
