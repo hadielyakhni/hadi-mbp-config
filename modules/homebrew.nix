@@ -26,6 +26,7 @@
       "github"
       "microsoft-edge"
       "firefox"
+      "arc"
       "vlc"
       "cursor"
       "cold-turkey-blocker"
