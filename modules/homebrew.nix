@@ -4,7 +4,7 @@
   homebrew = {
     enable = true;
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       # 'zap': uninstalls all formulae(and related files) not listed here.
       cleanup = "zap";
     };
