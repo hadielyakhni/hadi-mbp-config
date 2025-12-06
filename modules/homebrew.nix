@@ -24,7 +24,6 @@
       "visual-studio-code"
       "whatsapp"
       "github"
-      "google-chrome"
       "microsoft-edge"
       "firefox"
       "vlc"
