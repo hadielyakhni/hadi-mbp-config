@@ -30,6 +30,13 @@
       "vlc"
       "cursor"
       "cold-turkey-blocker"
+      "iterm2"
+      "discord"
+      "rectangle"
+      "spotify"
+      "telegram-desktop"
+      "zoom"
+      "slack"
     ];
     caskArgs.no_quarantine = true;
   };
