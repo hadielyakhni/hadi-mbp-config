@@ -26,6 +26,7 @@
       "github"
       "microsoft-edge"
       "firefox"
+      "google-chrome"
       "arc"
       "vlc"
       "cursor"
