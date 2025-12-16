@@ -38,6 +38,7 @@
       "telegram-desktop"
       "zoom"
       "slack"
+      "ghostty"
     ];
     caskArgs.no_quarantine = true;
   };
