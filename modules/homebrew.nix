@@ -38,7 +38,7 @@
       "telegram-desktop"
       "zoom"
       "slack"
-      "ghostty"
+      "garmin-express"
     ];
     caskArgs.no_quarantine = true;
   };
