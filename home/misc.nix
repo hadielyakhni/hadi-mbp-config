@@ -20,7 +20,7 @@
       ppkgs.pylint
       ppkgs.jedi
     ]))
-    nodejs_23
+    nodejs_22
     pkgsx86_64Darwin.wkhtmltopdf-bin
     tig
     tree
