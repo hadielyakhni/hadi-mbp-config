@@ -39,6 +39,7 @@
       "zoom"
       "slack"
       "garmin-express"
+      "claude-code"
     ];
     caskArgs.no_quarantine = true;
   };
