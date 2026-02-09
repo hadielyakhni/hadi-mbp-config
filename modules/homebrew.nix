@@ -40,6 +40,7 @@
       "slack"
       "garmin-express"
       "claude-code"
+      "antigravity"
     ];
     caskArgs.no_quarantine = true;
   };
