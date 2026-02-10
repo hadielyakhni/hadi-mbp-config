@@ -29,7 +29,6 @@
       "google-chrome"
       "arc"
       "vlc"
-      "cursor"
       "cold-turkey-blocker"
       "iterm2"
       "discord"
