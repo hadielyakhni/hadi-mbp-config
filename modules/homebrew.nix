@@ -40,6 +40,7 @@
       "garmin-express"
       "claude-code"
       "antigravity"
+      "raycast"
     ];
     caskArgs.no_quarantine = true;
   };
