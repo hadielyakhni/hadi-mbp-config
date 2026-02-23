@@ -3,6 +3,7 @@
   imports =
     [
       ./misc.nix
+      ./gh.nix
       ./git.nix
       ./tmux.nix
       ./vim.nix
