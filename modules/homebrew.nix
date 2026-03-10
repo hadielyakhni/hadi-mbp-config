@@ -22,7 +22,6 @@
       "notion"
       "pycharm"
       "visual-studio-code"
-      "whatsapp"
       "github"
       "microsoft-edge"
       "firefox"
