@@ -37,6 +37,7 @@
       "slack"
       "garmin-express"
       "claude-code"
+      "claude"
       "raycast"
     ];
     caskArgs.no_quarantine = true;
