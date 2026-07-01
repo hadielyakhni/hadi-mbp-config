@@ -21,6 +21,7 @@
     initExtra = ''
       export PATH=$PATH:/opt/homebrew/opt/postgresql@16/bin
       export PATH=$PATH:$HOME/Dev/odoo/scripts/db_manager
+      export PATH=$PATH:$HOME/Dev/odoo/scripts
       source ~/Dev/odoo/scripts/o/o
       source ~/Dev/odoo/scripts/db_manager/zsh_completion
 
