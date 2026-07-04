@@ -13,6 +13,9 @@
       # The brews you don't find in nixpkgs
       "postgresql@16"
       "coreutils"
+      "docker"
+      "docker-compose"
+      "colima"
     ];
 
     # the apps that doesn't work well with nix
