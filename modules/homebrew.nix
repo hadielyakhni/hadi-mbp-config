@@ -15,6 +15,7 @@
       "coreutils"
       "docker"
       "docker-compose"
+      "herdr"
       "colima"
     ];
 
