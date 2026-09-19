@@ -38,6 +38,7 @@
       "garmin-express"
       "claude-code"
       "raycast"
+      "session-manager-plugin"
     ];
     caskArgs.no_quarantine = true;
   };
