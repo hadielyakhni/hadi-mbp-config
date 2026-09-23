@@ -39,6 +39,7 @@
       "claude-code"
       "raycast"
       "session-manager-plugin"
+      "cleanshot"
     ];
     caskArgs.no_quarantine = true;
   };
