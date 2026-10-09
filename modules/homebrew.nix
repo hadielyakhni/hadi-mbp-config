@@ -28,6 +28,7 @@
       "github"
       "google-chrome"
       "arc"
+      "thebrowsercompany-dia"
       "vlc"
       "iterm2"
       "discord"
